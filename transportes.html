@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Transportes</title>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+
+body{
+  font-family:Arial;
+  background:url("fondo_menu.jpg") no-repeat center/cover fixed;
+  color:white;
+}
+
+body::before{
+  content:"";
+  position:fixed;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.75);
+  z-index:-1;
+}
+
+.header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:20px 40px;
+}
+
+.header h1{
+  font-size:2.5rem;
+  background:linear-gradient(90deg,#fff,#38bdf8,#f97316);
+  -webkit-background-clip:text;
+  color:transparent;
+}
+
+.search{
+  width:100%;
+  max-width:400px;
+  padding:10px;
+  border-radius:10px;
+  border:none;
+  margin:10px auto;
+  display:block;
+}
+
+.btn-back{
+  background:#38bdf8;
+  padding:10px 15px;
+  border-radius:10px;
+  text-decoration:none;
+  color:black;
+  font-weight:bold;
+}
+
+.btn-back:hover{
+  background:#f97316;
+  color:white;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:20px;
+  padding:30px;
+}
+
+.box{
+  background:rgba(2,6,23,0.9);
+  border-radius:15px;
+  padding:15px;
+  transition:0.3s;
+}
+
+.box:hover{
+  transform:translateY(-8px) scale(1.02);
+}
+
+.box img{
+  width:100%;
+  height:150px;
+  object-fit:cover;
+  border-radius:10px;
+}
+
+.box h3{
+  margin-top:10px;
+}
+
+.info{
+  font-size:14px;
+  color:#cbd5f5;
+}
+
+.rating{
+  color:#facc15;
+  font-size:14px;
+}
+
+.review{
+  font-size:13px;
+  margin-top:5px;
+  font-style:italic;
+  color:#f97316;
+}
+
+.buttons{
+  margin-top:10px;
+  display:flex;
+  gap:10px;
+}
+
+.btn{
+  flex:1;
+  text-align:center;
+  padding:8px;
+  border-radius:8px;
+  background:#38bdf8;
+  color:black;
+  text-decoration:none;
+  font-weight:bold;
+}
+
+.btn:hover{
+  background:#f97316;
+  color:white;
+}
+</style>
+</head>
+
+<body>
+
+<div class="header">
+<h1>Transportes</h1>
+<a href="index.html" class="btn-back">⬅ Volver</a>
+</div>
+
+<input type="text" class="search" placeholder="Buscar transporte..." onkeyup="filtrar()">
+
+<div class="grid" id="grid">
+
+<!-- UBER -->
+<div class="box">
+<img src="trans1.jpg">
+<h3>Uber</h3>
+<div class="info">💰 $5 - $20 | Rápido y cómodo</div>
+<div class="info">👥 1 - 4 personas</div>
+<div class="rating">⭐ 4.8</div>
+<div class="review">"Muy práctico para moverse por la ciudad rápidamente."</div>
+<div class="buttons">
+<a class="btn" href="lugares.html">Lugares</a>
+<a class="btn" href="restaurantes.html">Restaurantes</a>
+</div>
+</div>
+
+<!-- TAXI -->
+<div class="box">
+<img src="trans2.jpg">
+<h3>Taxi</h3>
+<div class="info">💰 $3 - $15 | Disponible siempre</div>
+<div class="info">👥 1 - 4 personas</div>
+<div class="rating">⭐ 4.2</div>
+<div class="review">"Servicio clásico, fácil de encontrar en cualquier zona."</div>
+<div class="buttons">
+<a class="btn" href="hoteles.html">Hoteles</a>
+<a class="btn" href="restaurantes.html">Restaurantes</a>
+</div>
+</div>
+
+<!-- BUS PRIVADO -->
+<div class="box">
+<img src="trans3.jpg">
+<h3>Bus Privado</h3>
+<div class="info">💰 $50 - $200 | Viajes en grupo</div>
+<div class="info">👥 Mínimo 10 personas</div>
+<div class="rating">⭐ 4.6</div>
+<div class="review">"Ideal para excursiones y viajes turísticos en grupo."</div>
+<div class="buttons">
+<a class="btn" href="lugares.html">Tours</a>
+<a class="btn" href="hoteles.html">Hoteles</a>
+</div>
+</div>
+
+<!-- AVIÓN -->
+<div class="box">
+<img src="trans4.jpg">
+<h3>Avión</h3>
+<div class="info">💰 $100+ | Internacional</div>
+<div class="info">👥 1+ personas</div>
+<div class="rating">⭐ 4.7</div>
+<div class="review">"La mejor opción para viajar largas distancias."</div>
+<div class="buttons">
+<a class="btn" href="lugares.html">Destinos</a>
+<a class="btn" href="hoteles.html">Hoteles</a>
+</div>
+</div>
+
+<!-- HELICÓPTERO -->
+<div class="box">
+<img src="trans5.jpg">
+<h3>Helicóptero</h3>
+<div class="info">💰 $500+ | Lujo</div>
+<div class="info">👥 2 - 6 personas</div>
+<div class="rating">⭐ 4.9</div>
+<div class="review">"Experiencia exclusiva con vistas impresionantes."</div>
+<div class="buttons">
+<a class="btn" href="lugares.html">Tours</a>
+</div>
+</div>
+
+<!-- VAN -->
+<div class="box">
+<img src="trans6.jpg">
+<h3>Van Turística</h3>
+<div class="info">💰 $20 - $80 | Cómodo</div>
+<div class="info">👥 5 - 12 personas</div>
+<div class="rating">⭐ 4.5</div>
+<div class="review">"Perfecta para grupos pequeños y viajes cómodos."</div>
+<div class="buttons">
+<a class="btn" href="lugares.html">Rutas</a>
+<a class="btn" href="hoteles.html">Hoteles</a>
+</div>
+</div>
+
+</div>
+
+<script>
+function filtrar(){
+  let input = document.querySelector(".search").value.toLowerCase();
+  let items = document.querySelectorAll(".box");
+
+  items.forEach(item=>{
+    let texto = item.innerText.toLowerCase();
+    item.style.display = texto.includes(input) ? "block" : "none";
+  });
+}
+</script>
+
+</body>
+</html>

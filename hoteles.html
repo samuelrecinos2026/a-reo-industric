@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Hoteles</title>
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family:Arial;
+  background-image:url("fondo_menu.jpg");
+  background-size:cover;
+  background-position:center;
+  background-attachment:fixed;
+  color:white;
+}
+
+/* OSCURECER FONDO */
+body::before{
+  content:"";
+  position:fixed;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.7);
+  z-index:-1;
+}
+
+/* BOTON VOLVER */
+.btn-back{
+  position:fixed;
+  top:20px;
+  left:20px;
+  padding:10px 15px;
+  background:rgba(0,0,0,0.7);
+  color:white;
+  text-decoration:none;
+  border-radius:10px;
+  font-weight:bold;
+  z-index:1000;
+}
+
+.btn-back:hover{
+  background:#f97316;
+}
+
+/* TITULO PRO */
+h1{
+  text-align:center;
+  padding:30px;
+  font-size:3rem;
+  background:linear-gradient(90deg,#fff,#38bdf8,#f97316);
+  -webkit-background-clip:text;
+  color:transparent;
+}
+
+/* CONTENEDOR */
+.container{
+  max-width:1200px;
+  margin:auto;
+  padding:20px;
+}
+
+/* GRID */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+  gap:20px;
+}
+
+/* TARJETAS */
+.card{
+  background:rgba(2,6,23,0.85);
+  backdrop-filter:blur(8px);
+  padding:15px;
+  border-radius:15px;
+  transition:0.4s;
+}
+
+.card:hover{
+  transform:translateY(-10px) scale(1.03);
+}
+
+.card img{
+  width:100%;
+  height:200px;
+  object-fit:cover;
+  border-radius:10px;
+}
+
+.card h3{
+  margin:10px 0;
+}
+
+.card p{
+  font-size:14px;
+  margin:5px 0;
+}
+
+.stars{
+  color:gold;
+}
+
+/* MAPA */
+.card iframe{
+  width:100%;
+  height:200px;
+  border:none;
+  border-radius:10px;
+  margin-top:10px;
+}
+
+/* BOTONES */
+.btn{
+  display:block;
+  text-align:center;
+  margin-top:10px;
+  padding:10px;
+  border-radius:10px;
+  background:#38bdf8;
+  color:black;
+  text-decoration:none;
+  font-weight:bold;
+  transition:0.3s;
+}
+
+.btn:hover{
+  background:#f97316;
+  color:white;
+}
+</style>
+</head>
+
+<body>
+
+<a href="index.html" class="btn-back">⬅ Volver</a>
+
+<h1>Hoteles</h1>
+
+<div class="container">
+<div class="grid">
+
+<!-- 1 -->
+<div class="card">
+<img src="hotel1.jpg">
+<h3>Burj Al Arab</h3>
+<p class="stars">★★★★★</p>
+<p><b>Ubicación:</b> Dubái</p>
+<p><b>Precio:</b> $1000/noche</p>
+<p><b>Servicios:</b> Piscina, spa, mayordomo privado</p>
+<p>Uno de los hoteles más lujosos del mundo con arquitectura icónica.</p>
+<iframe src="https://www.google.com/maps?q=Burj+Al+Arab&output=embed"></iframe>
+<a class="btn" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Burj+Al+Arab">Ver en Google Maps</a>
+</div>
+
+<!-- 2 -->
+<div class="card">
+<img src="hotel2.jpg">
+<h3>Marina Bay Sands</h3>
+<p class="stars">★★★★★</p>
+<p><b>Ubicación:</b> Singapur</p>
+<p><b>Precio:</b> $500/noche</p>
+<p><b>Servicios:</b> Piscina infinita, casino</p>
+<p>Famoso por su piscina en la azotea con vistas panorámicas.</p>
+<iframe src="https://www.google.com/maps?q=Marina+Bay+Sands&output=embed"></iframe>
+<a class="btn" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Marina+Bay+Sands">Ver en Google Maps</a>
+</div>
+
+<!-- 3 -->
+<div class="card">
+<img src="hotel3.jpg">
+<h3>The Plaza</h3>
+<p class="stars">★★★★★</p>
+<p><b>Ubicación:</b> Nueva York</p>
+<p><b>Precio:</b> $600/noche</p>
+<p><b>Servicios:</b> Spa, lujo clásico</p>
+<p>Hotel histórico frente a Central Park.</p>
+<iframe src="https://www.google.com/maps?q=The+Plaza+Hotel&output=embed"></iframe>
+<a class="btn" target="_blank" href="https://www.google.com/maps/search/?api=1&query=The+Plaza+Hotel">Ver en Google Maps</a>
+</div>
+
+<!-- 4 -->
+<div class="card">
+<img src="hotel4.jpg">
+<h3>Ritz Paris</h3>
+<p class="stars">★★★★★</p>
+<p><b>Ubicación:</b> París</p>
+<p><b>Precio:</b> $900/noche</p>
+<p><b>Servicios:</b> Restaurante gourmet, spa</p>
+<p>Elegancia francesa en el corazón de la ciudad.</p>
+<iframe src="https://www.google.com/maps?q=Ritz+Paris&output=embed"></iframe>
+<a class="btn" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Ritz+Paris">Ver en Google Maps</a>
+</div>
+
+<!-- 5 -->
+<div class="card">
+<img src="hotel5.jpg">
+<h3>Atlantis The Palm</h3>
+<p class="stars">★★★★★</p>
+<p><b>Ubicación:</b> Dubái</p>
+<p><b>Precio:</b> $700/noche</p>
+<p><b>Servicios:</b> Parque acuático, acuario</p>
+<p>Resort espectacular en la isla artificial Palm Jumeirah.</p>
+<iframe src="https://www.google.com/maps?q=Atlantis+The+Palm&output=embed"></iframe>
+<a class="btn" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Atlantis+The+Palm">Ver en Google Maps</a>
+</div>
+
+<!-- 6 -->
+<div class="card">
+<img src="hotel6.jpg">
+<h3>Four Seasons Bora Bora</h3>
+<p class="stars">★★★★★</p>
+<p><b>Ubicación:</b> Bora Bora</p>
+<p><b>Precio:</b> $1200/noche</p>
+<p><b>Servicios:</b> Villas sobre el agua</p>
+<p>Experiencia tropical exclusiva.</p>
+<iframe src="https://www.google.com/maps?q=Four+Seasons+Bora+Bora&output=embed"></iframe>
+<a class="btn" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Four+Seasons+Bora+Bora">Ver en Google Maps</a>
+</div>
+
+<!-- 7 -->
+<div class="card">
+<img src="hotel7.jpg">
+<h3>Bellagio</h3>
+<p class="stars">★★★★★</p>
+<p><b>Ubicación:</b> Las Vegas</p>
+<p><b>Precio:</b> $400/noche</p>
+<p><b>Servicios:</b> Casino, shows</p>
+<p>Famoso por sus fuentes danzantes.</p>
+<iframe src="https://www.google.com/maps?q=Bellagio+Hotel&output=embed"></iframe>
+<a class="btn" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Bellagio+Hotel">Ver en Google Maps</a>
+</div>
+
+<!-- 8 -->
+<div class="card">
+<img src="hotel8.jpg">
+<h3>Mandarin Oriental</h3>
+<p class="stars">★★★★★</p>
+<p><b>Ubicación:</b> Bangkok</p>
+<p><b>Precio:</b> $350/noche</p>
+<p><b>Servicios:</b> Spa, lujo asiático</p>
+<p>Hotel icónico con tradición y elegancia.</p>
+<iframe src="https://www.google.com/maps?q=Mandarin+Oriental+Bangkok&output=embed"></iframe>
+<a class="btn" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Mandarin+Oriental+Bangkok">Ver en Google Maps</a>
+</div>
+
+<!-- 9 -->
+<div class="card">
+<img src="hotel9.jpg">
+<h3>Hotel de Glace</h3>
+<p class="stars">★★★★</p>
+<p><b>Ubicación:</b> Canadá</p>
+<p><b>Precio:</b> $300/noche</p>
+<p><b>Servicios:</b> Experiencia hielo</p>
+<p>Hotel construido completamente de hielo.</p>
+<iframe src="https://www.google.com/maps?q=Hotel+de+Glace&output=embed"></iframe>
+<a class="btn" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Hotel+de+Glace">Ver en Google Maps</a>
+</div>
+
+<!-- 10 -->
+<div class="card">
+<img src="hotel10.jpg">
+<h3>Giraffe Manor</h3>
+<p class="stars">★★★★★</p>
+<p><b>Ubicación:</b> Kenia</p>
+<p><b>Precio:</b> $800/noche</p>
+<p><b>Servicios:</b> Experiencia con animales</p>
+<p>Interactúa con jirafas mientras desayunas.</p>
+<iframe src="https://www.google.com/maps?q=Giraffe+Manor&output=embed"></iframe>
+<a class="btn" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Giraffe+Manor">Ver en Google Maps</a>
+</div>
+
+<!-- 11 -->
+<div class="card">
+<img src="hotel11.jpg">
+<h3>Shangri-La Tokyo</h3>
+<p class="stars">★★★★★</p>
+<p><b>Ubicación:</b> Tokio</p>
+<p><b>Precio:</b> $450/noche</p>
+<p><b>Servicios:</b> Vista skyline</p>
+<p>Lujo moderno con vistas impresionantes.</p>
+<iframe src="https://www.google.com/maps?q=Shangri+La+Tokyo&output=embed"></iframe>
+<a class="btn" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Shangri+La+Tokyo">Ver en Google Maps</a>
+</div>
+
+<!-- 12 -->
+<div class="card">
+<img src="hotel12.jpg">
+<h3>Emirates Palace</h3>
+<p class="stars">★★★★★</p>
+<p><b>Ubicación:</b> Abu Dhabi</p>
+<p><b>Precio:</b> $600/noche</p>
+<p><b>Servicios:</b> Lujo árabe</p>
+<p>Palacio convertido en hotel.</p>
+<iframe src="https://www.google.com/maps?q=Emirates+Palace&output=embed"></iframe>
+<a class="btn" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Emirates+Palace">Ver en Google Maps</a>
+</div>
+
+<!-- 13 -->
+<div class="card">
+<img src="hotel13.jpg">
+<h3>Fairmont Banff Springs</h3>
+<p class="stars">★★★★★</p>
+<p><b>Ubicación:</b> Canadá</p>
+<p><b>Precio:</b> $400/noche</p>
+<p><b>Servicios:</b> Montaña, spa</p>
+<p>Hotel tipo castillo en las montañas.</p>
+<iframe src="https://www.google.com/maps?q=Fairmont+Banff+Springs&output=embed"></iframe>
+<a class="btn" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Fairmont+Banff+Springs">Ver en Google Maps</a>
+</div>
+
+<!-- 14 -->
+<div class="card">
+<img src="hotel14.jpg">
+<h3>The Savoy</h3>
+<p class="stars">★★★★★</p>
+<p><b>Ubicación:</b> Londres</p>
+<p><b>Precio:</b> $700/noche</p>
+<p><b>Servicios:</b> Elegancia clásica</p>
+<p>Hotel icónico británico.</p>
+<iframe src="https://www.google.com/maps?q=The+Savoy+London&output=embed"></iframe>
+<a class="btn" target="_blank" href="https://www.google.com/maps/search/?api=1&query=The+Savoy+London">Ver en Google Maps</a>
+</div>
+
+<!-- 15 -->
+<div class="card">
+<img src="hotel15.jpg">
+<h3>Hotel Sacher</h3>
+<p class="stars">★★★★★</p>
+<p><b>Ubicación:</b> Viena</p>
+<p><b>Precio:</b> $500/noche</p>
+<p><b>Servicios:</b> Historia, lujo</p>
+<p>Famoso por su tradición y elegancia.</p>
+<iframe src="https://www.google.com/maps?q=Hotel+Sacher&output=embed"></iframe>
+<a class="btn" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Hotel+Sacher">Ver en Google Maps</a>
+</div>
+
+</div>
+</div>
+
+</body>
+</html>

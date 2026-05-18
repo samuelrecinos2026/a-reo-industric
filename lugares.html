@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Lugares Turísticos</title>
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family:Arial;
+  background-image:url("fondo_menu.jpg");
+  background-size:cover;
+  background-position:center;
+  background-attachment:fixed;
+  color:white;
+}
+
+/* OSCURECER FONDO */
+body::before{
+  content:"";
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.7);
+  z-index:-1;
+}
+
+/* TITULO PRO */
+h1{
+  text-align:center;
+  padding:30px;
+  font-size:3rem;
+  background:linear-gradient(90deg,#ffffff,#38bdf8,#f97316);
+  -webkit-background-clip:text;
+  color:transparent;
+}
+
+/* CONTENEDOR */
+.container{
+  max-width:1200px;
+  margin:auto;
+  padding:20px;
+}
+
+/* GRID */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:20px;
+}
+
+/* TARJETAS */
+.card{
+  background:rgba(2,6,23,0.85);
+  backdrop-filter:blur(8px);
+  padding:15px;
+  border-radius:15px;
+  transition:0.4s;
+  box-shadow:0 10px 25px rgba(0,0,0,0.6);
+}
+
+.card:hover{
+  transform:translateY(-10px) scale(1.03);
+}
+
+/* IMAGEN */
+.card img{
+  width:100%;
+  height:180px;
+  object-fit:cover;
+  border-radius:10px;
+}
+
+/* TEXTO */
+.card h3{
+  margin:10px 0;
+}
+
+.card p{
+  font-size:14px;
+}
+
+/* MAPA */
+.card iframe{
+  width:100%;
+  height:200px;
+  border:none;
+  border-radius:10px;
+  margin-top:10px;
+}
+
+/* BOTON */
+.btn{
+  display:block;
+  text-align:center;
+  margin-top:10px;
+  padding:10px;
+  border-radius:10px;
+  background:#38bdf8;
+  color:black;
+  text-decoration:none;
+  font-weight:bold;
+  transition:0.3s;
+}
+
+.btn:hover{
+  background:#f97316;
+  color:white;
+}
+</style>
+</head>
+
+<body>
+<a href="index.html" class="btn-back">⬅ Volver</a>
+<h1>Lugares Turísticos</h1>
+
+<div class="container">
+<div class="grid">
+
+<!-- 1 -->
+<div class="card">
+<img src="lugar1.jpg">
+<h3>Machu Picchu</h3>
+<p>Perú. Ciudad inca en las montañas.</p>
+<iframe src="https://www.google.com/maps?q=Machu+Picchu&output=embed"></iframe>
+<a class="btn" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Machu+Picchu">Ver en Google Maps</a>
+</div>
+
+<!-- 2 -->
+<div class="card">
+<img src="lugar2.jpg">
+<h3>Torre Eiffel</h3>
+<p>Francia. Símbolo de París.</p>
+<iframe src="https://www.google.com/maps?q=Torre+Eiffel&output=embed"></iframe>
+<a class="btn" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Torre+Eiffel">Ver en Google Maps</a>
+</div>
+
+<!-- 3 -->
+<div class="card">
+<img src="lugar3.jpg">
+<h3>Gran Muralla China</h3>
+<p>China. Una de las obras más grandes del mundo.</p>
+<iframe src="https://www.google.com/maps?q=Gran+Muralla+China&output=embed"></iframe>
+<a class="btn" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Gran+Muralla+China">Ver en Google Maps</a>
+</div>
+
+<!-- 4 -->
+<div class="card">
+<img src="lugar4.jpg">
+<h3>Coliseo Romano</h3>
+<p>Italia. Historia del Imperio Romano.</p>
+<iframe src="https://www.google.com/maps?q=Coliseo+Roma&output=embed"></iframe>
+<a class="btn" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Coliseo+Roma">Ver en Google Maps</a>
+</div>
+
+<!-- 5 -->
+<div class="card">
+<img src="lugar5.jpg">
+<h3>Taj Mahal</h3>
+<p>India. Monumento de amor.</p>
+<iframe src="https://www.google.com/maps?q=Taj+Mahal&output=embed"></iframe>
+<a class="btn" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Taj+Mahal">Ver en Google Maps</a>
+</div>
+
+<!-- 6 -->
+<div class="card">
+<img src="lugar6.jpg">
+<h3>Estatua de la Libertad</h3>
+<p>EE.UU. Icono de Nueva York.</p>
+<iframe src="https://www.google.com/maps?q=Estatua+de+la+Libertad&output=embed"></iframe>
+<a class="btn" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Estatua+de+la+Libertad">Ver en Google Maps</a>
+</div>
+
+<!-- 7 -->
+<div class="card">
+<img src="lugar7.jpg">
+<h3>Pirámides de Egipto</h3>
+<p>Egipto. Antiguas estructuras faraónicas.</p>
+<iframe src="https://www.google.com/maps?q=Piramides+de+Egipto&output=embed"></iframe>
+<a class="btn" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Piramides+de+Egipto">Ver en Google Maps</a>
+</div>
+
+<!-- 8 -->
+<div class="card">
+<img src="lugar8.jpg">
+<h3>Petra</h3>
+<p>Jordania. Ciudad tallada en roca.</p>
+<iframe src="https://www.google.com/maps?q=Petra+Jordania&output=embed"></iframe>
+<a class="btn" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Petra+Jordania">Ver en Google Maps</a>
+</div>
+
+<!-- 9 -->
+<div class="card">
+<img src="lugar9.jpg">
+<h3>Santorini</h3>
+<p>Grecia. Isla con vistas espectaculares.</p>
+<iframe src="https://www.google.com/maps?q=Santorini&output=embed"></iframe>
+<a class="btn" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Santorini">Ver en Google Maps</a>
+</div>
+
+<!-- 10 -->
+<div class="card">
+<img src="lugar10.jpg">
+<h3>Gran Cañón</h3>
+<p>EE.UU. Maravilla natural.</p>
+<iframe src="https://www.google.com/maps?q=Gran+Canon&output=embed"></iframe>
+<a class="btn" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Gran+Canon">Ver en Google Maps</a>
+</div>
+
+<!-- 11 -->
+<div class="card">
+<img src="lugar11.jpg">
+<h3>Chichén Itzá</h3>
+<p>México. Ruinas mayas.</p>
+<iframe src="https://www.google.com/maps?q=Chichen+Itza&output=embed"></iframe>
+<a class="btn" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Chichen+Itza">Ver en Google Maps</a>
+</div>
+
+<!-- 12 -->
+<div class="card">
+<img src="lugar12.jpg">
+<h3>Ópera de Sídney</h3>
+<p>Australia. Arquitectura moderna.</p>
+<iframe src="https://www.google.com/maps?q=Opera+de+Sidney&output=embed"></iframe>
+<a class="btn" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Opera+de+Sidney">Ver en Google Maps</a>
+</div>
+
+<!-- 13 -->
+<div class="card">
+<img src="lugar13.jpg">
+<h3>Venecia</h3>
+<p>Italia. Ciudad de canales.</p>
+<iframe src="https://www.google.com/maps?q=Venecia&output=embed"></iframe>
+<a class="btn" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Venecia">Ver en Google Maps</a>
+</div>
+
+<!-- 14 -->
+<div class="card">
+<img src="lugar14.jpg">
+<h3>Maldivas</h3>
+<p>Destino tropical de lujo.</p>
+<iframe src="https://www.google.com/maps?q=Maldivas&output=embed"></iframe>
+<a class="btn" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Maldivas">Ver en Google Maps</a>
+</div>
+
+<!-- 15 -->
+<div class="card">
+<img src="lugar15.jpg">
+<h3>Burj Khalifa</h3>
+<p>Dubái. Edificio más alto del mundo.</p>
+<iframe src="https://www.google.com/maps?q=Burj+Khalifa&output=embed"></iframe>
+<a class="btn" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Burj+Khalifa">Ver en Google Maps</a>
+</div>
+
+</div>
+</div>
+
+</body>
+<style>
+
+    .btn-back{
+  position:fixed;
+  top:20px;
+  left:20px;
+  padding:10px 15px;
+  background:rgba(0,0,0,0.7);
+  color:white;
+  text-decoration:none;
+  border-radius:10px;
+  font-weight:bold;
+  transition:0.3s;
+  backdrop-filter:blur(5px);
+  z-index:1000;
+}
+
+.btn-back:hover{
+  background:#f97316;
+  color:white;
+  transform:scale(1.1);
+}
+</style>
+</html>
